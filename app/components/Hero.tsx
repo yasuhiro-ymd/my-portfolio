@@ -3,8 +3,6 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className="relative w-full h-[480px] bg-gradient-to-br from-[#0a0a1a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
-      {/* Background Image - 実際の画像パスに置き換えてください */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/hero-bg.jpg)' }} />
       
       {/* 幾何学的な装飾要素 */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
