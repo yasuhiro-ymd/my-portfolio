@@ -55,9 +55,25 @@ html {
 @media (max-width: 768px) {
   html {
     scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   * {
     -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* モバイルでのレンダリング最適化 */
+  body {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+  }
+  
+  /* スクロール時のパフォーマンス改善 */
+  section, div {
+    will-change: auto;
   }
 }
