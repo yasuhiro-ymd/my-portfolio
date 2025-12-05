@@ -42,19 +42,18 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-4 md:py-8" style={{ contain: 'layout style paint' }}>
+    <section id="projects" className="w-full py-4 md:py-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 px-4 sm:px-5">プロジェクト / 研究</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-4 sm:px-5 py-4">
           {projects.map((project, index) => (
-            <div key={project.id} className="flex flex-col gap-3 pb-3" style={{ contain: 'layout style' }}>
+            <div key={project.id} className="flex flex-col gap-3 pb-3">
               <div 
                 className="relative w-full rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center"
                 style={{ 
                   height: '200px',
-                  minHeight: '200px',
-                  contain: 'layout style paint'
+                  minHeight: '200px'
                 }}
               >
                 <Image

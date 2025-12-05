@@ -64,16 +64,18 @@ html {
   
   /* モバイルでのレンダリング最適化 */
   body {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
+  }
+  
+  /* 画像の最適化 */
+  img {
+    max-width: 100%;
+    height: auto;
   }
   
   /* スクロール時のパフォーマンス改善 */
-  section, div {
-    will-change: auto;
+  section {
+    isolation: isolate;
   }
 }
