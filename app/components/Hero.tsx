@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/hero-bg.jpg)' }} />
       
       {/* 幾何学的な装飾要素 */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-5">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
         {/* 円形の装飾 */}
         <div className="absolute top-16 left-8 sm:left-16 md:left-24 w-20 h-20 sm:w-32 sm:h-32 border-2 border-white/20 rounded-full"></div>
         <div className="absolute top-32 right-12 sm:right-24 md:right-40 w-16 h-16 sm:w-24 sm:h-24 border-2 border-white/15 rounded-full"></div>
@@ -45,7 +45,7 @@ export default function Hero() {
         <div className="absolute top-14 left-1/6 w-2 h-2 sm:w-3 sm:h-3 bg-white/20 rounded-full"></div>
         <div className="absolute top-32 left-2/3 w-2 h-2 sm:w-3 sm:h-3 bg-white/25 rounded-full"></div>
         <div className="absolute top-48 right-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-white/20 rounded-full"></div>
-        <div className="absolute top-68 left-3/5 w-2 h-2 sm:w-3 sm:h-3 bg-white/18 rounded-full"></div>
+        <div className="absolute top-64 left-3/5 w-2 h-2 sm:w-3 sm:h-3 bg-white/18 rounded-full"></div>
       </div>
       
       <div className="relative z-10 h-full flex flex-col justify-end px-4 sm:px-12 md:px-16 lg:px-52 pb-12">
