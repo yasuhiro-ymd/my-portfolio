@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[400px] sm:min-h-[450px] md:min-h-[480px] bg-gradient-to-br from-[#0a0a1a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
+    <section className="relative w-full h-[400px] sm:h-[450px] md:h-[480px] bg-gradient-to-br from-[#0a0a1a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
       
       {/* 幾何学的な装飾要素 */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
@@ -46,50 +46,50 @@ export default function Hero() {
         <div className="absolute top-32 sm:top-40 md:top-64 left-3/5 w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-white/18 rounded-full"></div>
       </div>
       
-      <div className="relative z-10 w-full flex flex-col justify-center sm:justify-end px-4 sm:px-8 md:px-16 lg:px-52 pt-8 sm:pt-12 md:pt-16 pb-0">
-        <div className="flex flex-col gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10 max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-[-0.04em]">
+      <div className="relative z-10 h-full flex flex-col justify-center sm:justify-end px-4 sm:px-8 md:px-16 lg:px-52 pb-6 sm:pb-12">
+        <div className="flex flex-col gap-2 mb-4 sm:mb-6 max-w-4xl">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-[-0.04em]">
             山田 泰大
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed max-w-2xl">
             東京大学総合文化研究科広域科学専攻 修士課程
           </p>
         </div>
         
-        <div className="flex flex-wrap gap-2.5 sm:gap-3 md:gap-4 mb-0">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           <Link
             href="#about"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             自己紹介
           </Link>
           <Link
             href="#projects"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             プロジェクト
           </Link>
           <Link
             href="#achievements"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             業績
           </Link>
           <Link
             href="#experience"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             経歴/学歴
           </Link>
           <Link
             href="#skills"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             スキル
           </Link>
           <Link
             href="#contact"
-            className="px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 bg-[#1e1e3f]/80 backdrop-blur-sm hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl transition-all duration-300 h-11 sm:h-12 md:h-14 flex items-center justify-center min-w-[110px] sm:min-w-[130px] md:min-w-[150px] shadow-lg hover:shadow-[#4a9eff]/50 hover:scale-[1.02] active:scale-[0.98] border border-white/10 hover:border-[#4a9eff]/50"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >
             お問い合わせ
           </Link>
