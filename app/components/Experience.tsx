@@ -19,26 +19,26 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full py-4 md:py-8">
+    <section id="experience" className="w-full py-4 sm:py-6 md:py-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-2 px-4 sm:px-5">経歴 / 学歴</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 px-4 sm:px-5">経歴 / 学歴</h2>
         
-        <div className="flex flex-col gap-2 px-4 sm:px-5 py-0">
+        <div className="flex flex-col gap-2 sm:gap-3 px-4 sm:px-5 py-0">
           {experiences.map((exp, index) => (
-            <div key={exp.id} className="flex gap-2">
+            <div key={exp.id} className="flex gap-2 sm:gap-3">
               {/* Timeline */}
               <div className="flex flex-col items-center pt-3">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-[#4a9eff] flex items-center justify-center bg-[#0a0a1a] flex-shrink-0 shadow-lg shadow-[#4a9eff]/30">
-                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#4a9eff]" />
+                <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border-2 border-[#4a9eff] flex items-center justify-center bg-[#0a0a1a] flex-shrink-0 shadow-lg shadow-[#4a9eff]/30">
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-[#4a9eff]" />
                 </div>
                 {index < experiences.length - 1 && (
-                  <div className="w-0.5 h-2 sm:h-4 bg-gradient-to-b from-[#4a9eff] to-[#2d2d4d] mt-1" />
+                  <div className="w-0.5 h-2 sm:h-3 md:h-4 bg-gradient-to-b from-[#4a9eff] to-[#2d2d4d] mt-1" />
                 )}
               </div>
               
               {/* Content */}
-              <div className="flex-1 pb-5 pt-3">
-                <p className="text-sm sm:text-base font-medium text-white leading-relaxed">
+              <div className="flex-1 pb-4 sm:pb-5 pt-3">
+                <p className="text-xs sm:text-sm md:text-base font-medium text-white leading-relaxed">
                   {exp.period}: {exp.title}
                 </p>
               </div>

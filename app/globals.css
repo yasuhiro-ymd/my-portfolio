@@ -90,4 +90,23 @@ html {
     overflow-x: hidden;
     position: relative;
   }
+  
+  /* タッチターゲットの最適化 */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* テキストの選択を最適化 */
+  p, span, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* スクロールバーの非表示（モバイル） */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 }

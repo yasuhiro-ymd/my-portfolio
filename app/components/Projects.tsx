@@ -42,14 +42,14 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-4 md:py-8">
+    <section id="projects" className="w-full py-4 sm:py-6 md:py-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 px-4 sm:px-5">プロジェクト / 研究</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 px-4 sm:px-5">プロジェクト / 研究</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-4 sm:px-5 py-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 px-4 sm:px-5 py-3 sm:py-4">
           {projects.map((project, index) => (
-            <div key={project.id} className="flex flex-col gap-3 pb-3">
-              <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
+            <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
+              <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -61,9 +61,9 @@ export default function Projects() {
                   unoptimized={false}
                 />
               </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="text-sm sm:text-base font-medium text-white">{project.title}</h3>
-                <p className="text-xs sm:text-sm text-[#a8a8c8] leading-relaxed">{project.description}</p>
+              <div className="flex flex-col gap-1.5 sm:gap-2">
+                <h3 className="text-xs sm:text-sm md:text-base font-medium text-white leading-tight">{project.title}</h3>
+                <p className="text-[11px] sm:text-xs md:text-sm text-[#a8a8c8] leading-relaxed">{project.description}</p>
               </div>
             </div>
           ))}
