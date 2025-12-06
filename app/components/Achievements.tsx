@@ -13,7 +13,7 @@ export default function Achievements() {
             </div>
             <div className="p-4 rounded-lg bg-[#1e1e3f]/50 border border-[#2d2d4d] w-fit max-w-full">
               <p className="text-sm sm:text-base font-medium text-white leading-relaxed whitespace-normal">
-                MicroTas 2025 ポスター発表（テーマ：INFERENCING PSEUDO-TEMPORAL DYNAMICS AND CELL TYPES IN LABEL-FREE SPECTRAL FLOW CYTOMETRY）
+                MicroTas 2025 ポスター発表
               </p>
             </div>
           </div>
