@@ -70,6 +70,12 @@ export default function Hero() {
             プロジェクト
           </Link>
           <Link
+            href="#achievements"
+            className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
+          >
+            業績
+          </Link>
+          <Link
             href="#experience"
             className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
           >

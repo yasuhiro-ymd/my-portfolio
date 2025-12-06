@@ -4,6 +4,7 @@ export default function Navigation() {
   const navItems = [
     { href: '#about', label: '自己紹介' },
     { href: '#projects', label: 'プロジェクト/研究' },
+    { href: '#achievements', label: '業績' },
     { href: '#experience', label: '経歴/学歴' },
     { href: '#skills', label: 'スキル' },
     { href: '#contact', label: 'お問い合わせ' },
