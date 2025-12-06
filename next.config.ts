@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
   },
   // iPhoneでの互換性向上
   reactStrictMode: true,
-  swcMinify: true,
 };
 
 export default nextConfig;
