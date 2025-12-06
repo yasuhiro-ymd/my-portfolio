@@ -1,11 +1,9 @@
-'use client';
+const achievements = [
+  '基礎工学部賞（2024年度生物工学コース首席）',
+  'MicroTas 2025 ポスター発表',
+];
 
 export default function Achievements() {
-  const achievements = [
-    '基礎工学部賞（2024年度生物工学コース首席）',
-    'MicroTas 2025 ポスター発表',
-  ];
-
   return (
     <section id="achievements" className="w-full py-4 sm:py-6 md:py-8">
       <div className="max-w-7xl mx-auto">
@@ -17,7 +15,7 @@ export default function Achievements() {
           <div className="flex flex-col gap-2 sm:gap-3 items-start">
             {achievements.map((achievement, index) => (
               <div
-                key={index}
+                key={`achievement-${index}`}
                 className="p-3 sm:p-4 rounded-lg bg-[#1e1e3f]/50 border border-[#2d2d4d] w-full sm:w-fit max-w-full"
               >
                 <p className="text-xs sm:text-sm md:text-base font-medium text-white leading-relaxed whitespace-normal break-words">
