@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="absolute top-32 sm:top-40 md:top-64 left-3/5 w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-white/18 rounded-full"></div>
       </div>
       
-      <div className="relative z-10 w-full flex flex-col justify-center sm:justify-end px-4 sm:px-8 md:px-16 lg:px-52 pt-8 sm:pt-12 md:pt-16 pb-0">
+      <div className="relative z-10 w-full flex flex-col justify-center sm:justify-end px-4 sm:px-8 md:px-16 lg:px-52 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 md:pb-12">
         <div className="flex flex-col gap-2 mb-4 sm:mb-6 max-w-4xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-[-0.04em]">
             山田 泰大
@@ -56,7 +56,7 @@ export default function Hero() {
           </p>
         </div>
         
-        <div className="flex flex-wrap gap-2 sm:gap-3 mb-0">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           <Link
             href="#about"
             className="px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-[#1e1e3f] hover:bg-[#4a9eff] active:bg-[#4a9eff] text-white font-bold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 h-10 sm:h-11 md:h-12 flex items-center justify-center min-w-[100px] sm:min-w-[120px] shadow-lg hover:shadow-[#4a9eff]/50 active:scale-95 sm:hover:scale-105"
