@@ -58,7 +58,7 @@ export default function Home() {
       <Navigation />
       <main className="w-full overflow-x-hidden">
         <Hero />
-        <div className="bg-[#0a0a1a] py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40">
+        <div className="bg-[#0a0a1a] pt-0 sm:pt-0 md:py-12 lg:py-16 xl:py-20 pb-6 sm:pb-8 md:pb-12 lg:pb-16 xl:pb-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40">
           <About />
           <div className="h-16 sm:h-20 md:h-32" />
           <Projects />
