@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 interface Project {
@@ -40,6 +43,31 @@ const projects: Project[] = [
   },
 ];
 
+function ProjectImage({ src, alt, index }: { src: string; alt: string; index: number }) {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-[#a8a8c8] text-xs">
+        画像を読み込めませんでした
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      className="object-contain p-2"
+      loading={index < 2 ? "eager" : "lazy"}
+      unoptimized={true}
+      onError={() => setImageError(true)}
+    />
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="w-full py-4 sm:py-6 md:py-8">
@@ -50,16 +78,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
               <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain p-2"
-                  loading={index < 2 ? "eager" : "lazy"}
-                  quality={75}
-                  unoptimized={false}
-                />
+                <ProjectImage src={project.image} alt={project.title} index={index} />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
                 <h3 className="text-xs sm:text-sm md:text-base font-medium text-white leading-tight">{project.title}</h3>

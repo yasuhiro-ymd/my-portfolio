@@ -109,4 +109,32 @@ html {
     width: 0px;
     background: transparent;
   }
+  
+  /* iPhoneでの画像読み込みエラー防止 */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* Next.js Imageコンポーネントの最適化 */
+  span[style*="position: absolute"] {
+    position: relative !important;
+  }
+}
+
+/* iPhone Safari向けの追加最適化 */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* テキストは選択可能にする */
+  p, span, h1, h2, h3, h4, h5, h6, a {
+    -webkit-user-select: text;
+    user-select: text;
+  }
 }

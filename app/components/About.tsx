@@ -1,4 +1,32 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
+
+function ProfileImage() {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-[#a8a8c8] text-xs bg-gray-600">
+        画像を読み込めませんでした
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src="/profile.JPG"
+      alt="山田 泰大"
+      width={160}
+      height={160}
+      className="w-full h-full object-cover"
+      priority
+      unoptimized={true}
+      onError={() => setImageError(true)}
+    />
+  );
+}
 
 export default function About() {
   return (
@@ -10,15 +38,7 @@ export default function About() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full bg-gray-600 overflow-hidden">
-              <Image
-                src="/profile.JPG"
-                alt="山田 泰大"
-                width={160}
-                height={160}
-                className="w-full h-full object-cover"
-                priority
-                quality={85}
-              />
+              <ProfileImage />
             </div>
           </div>
           
