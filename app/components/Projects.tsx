@@ -49,12 +49,8 @@ export default function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 px-4 sm:px-5 py-3 sm:py-4">
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
-              {/* デバッグ用: 画像を非表示 */}
               <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
-                <div className="text-[#a8a8c8] text-xs text-center px-4">
-                  画像（デバッグ用に非表示）
-                </div>
-                {/* <Image
+                <Image
                   src={project.image}
                   alt={project.title}
                   width={800}
@@ -62,7 +58,7 @@ export default function Projects() {
                   className="object-contain p-2 w-full h-full"
                   loading={index < 2 ? "eager" : "lazy"}
                   unoptimized={true}
-                /> */}
+                />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
                 <h3 className="text-xs sm:text-sm md:text-base font-medium text-white leading-tight">{project.title}</h3>
