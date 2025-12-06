@@ -58,8 +58,8 @@ export default function Home() {
       <Navigation />
       <main className="w-full overflow-x-hidden">
         <Hero />
-        {/* <div className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40"> */}
-          {/* <About /> */}
+        <div className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40">
+          <About />
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
           {/* <Projects /> */}
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
@@ -70,7 +70,7 @@ export default function Home() {
           {/* <Skills /> */}
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
           {/* <Contact /> */}
-        {/* </div> */}
+        </div>
       </main>
     </div>
   );
