@@ -50,22 +50,16 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
               <div className="relative w-full h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
-                {project.id === 3 ? (
-                  <div className="text-[#a8a8c8] text-xs text-center px-4">
-                    画像（デバッグ用に非表示）
-                  </div>
-                ) : (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={600}
-                    className="object-contain p-1 sm:p-2 w-full h-full max-w-full max-h-full"
-                    loading={index < 2 ? "eager" : "lazy"}
-                    unoptimized={true}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                )}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={600}
+                  className="object-contain p-1 sm:p-2 w-full h-full max-w-full max-h-full"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  unoptimized={true}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
                 <h3 className="text-xs sm:text-sm md:text-base font-medium text-white leading-tight">{project.title}</h3>
