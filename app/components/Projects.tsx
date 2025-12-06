@@ -50,14 +50,14 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
               <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
-                {index === 0 ? (
+                {index < 2 ? (
                   <Image
                     src={project.image}
                     alt={project.title}
                     width={800}
                     height={600}
                     className="object-contain p-2 w-full h-full"
-                    loading="eager"
+                    loading={index === 0 ? "eager" : "lazy"}
                     unoptimized={true}
                   />
                 ) : (
