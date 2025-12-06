@@ -49,7 +49,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 px-4 sm:px-5 py-3 sm:py-4">
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
-              <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
+              <div className="relative w-full h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
                 {project.id === 3 ? (
                   <div className="text-[#a8a8c8] text-xs text-center px-4">
                     画像（デバッグ用に非表示）
@@ -60,9 +60,10 @@ export default function Projects() {
                     alt={project.title}
                     width={800}
                     height={600}
-                    className="object-contain p-2 w-full h-full"
+                    className="object-contain p-1 sm:p-2 w-full h-full max-w-full max-h-full"
                     loading={index < 2 ? "eager" : "lazy"}
                     unoptimized={true}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 )}
               </div>
