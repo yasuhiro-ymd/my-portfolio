@@ -68,8 +68,8 @@ export default function Home() {
           {/* <Experience />
           <div className="h-16 sm:h-20 md:h-32" /> */}
           {/* <Skills /> */}
-          <div className="h-16 sm:h-20 md:h-32" />
-          <Contact />
+          {/* <div className="h-16 sm:h-20 md:h-32" />
+          <Contact /> */}
         </div>
       </main>
     </div>
