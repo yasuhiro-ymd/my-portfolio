@@ -57,7 +57,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a1a] overflow-x-hidden">
       <Navigation />
       <main className="w-full overflow-x-hidden">
-        {/* <Hero /> */}
+        <Hero />
         {/* <div className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40"> */}
           {/* <About /> */}
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
