@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="absolute top-52 right-1/5 w-18 h-18 border border-white/12 -rotate-30"></div>
         
         {/* 六角形風の装飾（回転した四角形で表現） */}
-        <div className="absolute top-20 left-2/3 w-12 h-12 border border-white/15 rotate-45" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}></div>
+        <div className="absolute top-20 left-2/3 w-12 h-12 border border-white/15 rotate-45"></div>
         
         {/* 点/ドットの装飾 */}
         <div className="absolute top-14 left-1/6 w-3 h-3 bg-white/20 rounded-full"></div>

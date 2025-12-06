@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -17,11 +17,26 @@ const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "700", "800"],
   display: "swap",
+  preload: false,
+  fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
   title: "山田 泰大 - Portfolio",
   description: "Master's Student at the University of Tokyo, specializing in interdisciplinary science, machine learning, and optics.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#0a0a1a",
 };
 
 export default function RootLayout({

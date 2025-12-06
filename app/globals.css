@@ -48,6 +48,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* モバイルでのパフォーマンス最適化 */
@@ -55,26 +57,37 @@ html {
   html {
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   
   * {
     -webkit-tap-highlight-color: transparent;
   }
   
-  /* モバイルでのレンダリング最適化 */
-  body {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
   /* 画像の最適化 */
   img {
     max-width: 100%;
     height: auto;
+    display: block;
   }
   
   /* スクロール時のパフォーマンス改善 */
   section {
     isolation: isolate;
+  }
+  
+  /* スクロールコンテナの最適化 */
+  main {
+    overflow-x: hidden;
+    position: relative;
   }
 }

@@ -9,21 +9,21 @@ import Contact from './components/Contact';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a1a]">
+    <div className="min-h-screen bg-[#0a0a1a] overflow-x-hidden">
       <Navigation />
-      <main className="w-full">
+      <main className="w-full overflow-x-hidden">
         <Hero />
         <div className="py-8 sm:py-12 md:py-16 lg:py-20 px-0 md:px-20 lg:px-40">
           <About />
-          <div className="h-16 sm:h-20 md:h-30" />
+          <div className="h-16 sm:h-20 md:h-32" />
           <Projects />
-          <div className="h-16 sm:h-20 md:h-30" />
+          <div className="h-16 sm:h-20 md:h-32" />
           <Achievements />
-          <div className="h-16 sm:h-20 md:h-30" />
+          <div className="h-16 sm:h-20 md:h-32" />
           <Experience />
-          <div className="h-16 sm:h-20 md:h-30" />
+          <div className="h-16 sm:h-20 md:h-32" />
           <Skills />
-          <div className="h-16 sm:h-20 md:h-30" />
+          <div className="h-16 sm:h-20 md:h-32" />
           <Contact />
         </div>
       </main>

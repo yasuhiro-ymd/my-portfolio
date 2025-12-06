@@ -11,7 +11,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="w-full border-b border-[#2d2d4d]/50 sticky top-0 z-50 bg-[#0a0a1a]/95 backdrop-blur-md">
+    <nav className="w-full border-b border-[#2d2d4d]/50 sticky top-0 z-50 bg-[#0a0a1a]/95 backdrop-blur-sm md:backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-40 py-3 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
         {/* Logo */}
         <div className="flex items-center gap-4">

@@ -49,13 +49,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-4 sm:px-5 py-4">
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-3 pb-3">
-              <div 
-                className="relative w-full rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center"
-                style={{ 
-                  height: '200px',
-                  minHeight: '200px'
-                }}
-              >
+              <div className="relative w-full h-[200px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -64,6 +58,7 @@ export default function Projects() {
                   className="object-contain p-2"
                   loading={index < 2 ? "eager" : "lazy"}
                   quality={75}
+                  unoptimized={false}
                 />
               </div>
               <div className="flex flex-col gap-2">
