@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="relative w-full h-[400px] sm:h-[450px] md:h-[480px] bg-gradient-to-br from-[#0a0a1a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
       
-      {/* 幾何学的な装飾要素 - モバイルでは非表示 */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 hidden md:block">
+      {/* 幾何学的な装飾要素 */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
         {/* 円形の装飾 */}
         <div className="absolute top-16 left-24 w-32 h-32 border-2 border-white/20 rounded-full"></div>
         <div className="absolute top-32 right-40 w-24 h-24 border-2 border-white/15 rounded-full"></div>
