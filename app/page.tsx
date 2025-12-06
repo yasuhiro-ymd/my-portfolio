@@ -62,8 +62,8 @@ export default function Home() {
           <About />
           <div className="h-16 sm:h-20 md:h-32" />
           <Projects />
-          {/* <div className="h-16 sm:h-20 md:h-32" /> */}
-          {/* <Achievements /> */}
+          <div className="h-16 sm:h-20 md:h-32" />
+          <Achievements />
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
           {/* <Experience /> */}
           {/* <div className="h-16 sm:h-20 md:h-32" /> */}
