@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 w-full flex flex-col justify-center sm:justify-end px-4 sm:px-8 md:px-16 lg:px-52 pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-12">
-        <div className="flex flex-col gap-2 mb-4 sm:mb-6 max-w-4xl mt-8 sm:mt-12 md:mt-16">
+        <div className="flex flex-col gap-2 mb-8 sm:mb-10 md:mb-12 max-w-4xl mt-8 sm:mt-12 md:mt-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-[-0.04em]">
             山田 泰大
           </h1>
