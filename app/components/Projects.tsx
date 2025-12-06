@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface Project {
@@ -45,10 +45,23 @@ const projects: Project[] = [
 
 function ProjectImage({ src, alt, index }: { src: string; alt: string; index: number }) {
   const [imageError, setImageError] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-[#1e1e3f]">
+        <div className="w-8 h-8 border-2 border-[#4a9eff] border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   if (imageError) {
     return (
-      <div className="w-full h-full flex items-center justify-center text-[#a8a8c8] text-xs">
+      <div className="w-full h-full flex items-center justify-center text-[#a8a8c8] text-xs bg-[#1e1e3f]">
         画像を読み込めませんでした
       </div>
     );
@@ -63,12 +76,40 @@ function ProjectImage({ src, alt, index }: { src: string; alt: string; index: nu
       className="object-contain p-2"
       loading={index < 2 ? "eager" : "lazy"}
       unoptimized={true}
-      onError={() => setImageError(true)}
+      onError={() => {
+        try {
+          setImageError(true);
+        } catch (e) {
+          // エラーハンドリング中のエラーを無視
+        }
+      }}
+      style={{ position: 'absolute', inset: 0 }}
     />
   );
 }
 
 export default function Projects() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <section id="projects" className="w-full py-4 sm:py-6 md:py-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 px-4 sm:px-5">プロジェクト / 研究</h2>
+          <div className="px-4 sm:px-5 py-3 sm:py-4">
+            <div className="flex items-center justify-center py-8">
+              <div className="w-8 h-8 border-2 border-[#4a9eff] border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="projects" className="w-full py-4 sm:py-6 md:py-8">
       <div className="max-w-7xl mx-auto">
@@ -77,7 +118,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 px-4 sm:px-5 py-3 sm:py-4">
           {projects.map((project, index) => (
             <div key={project.id} className="flex flex-col gap-2 sm:gap-3 pb-3">
-              <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center">
+              <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] rounded-lg overflow-hidden bg-[#1e1e3f] flex items-center justify-center" style={{ position: 'relative' }}>
                 <ProjectImage src={project.image} alt={project.title} index={index} />
               </div>
               <div className="flex flex-col gap-1.5 sm:gap-2">
